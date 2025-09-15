@@ -12,3 +12,7 @@ Makefile
 # OS junk files
 .DS_Store
 Thumbs.db
+
+# Ignore executables
+*.exe
+
