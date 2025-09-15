@@ -1,0 +1,14 @@
+# CLion/IDEA project files
+.idea/
+*.iml
+
+# CMake build directories
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+*.cmake
+
+# OS junk files
+.DS_Store
+Thumbs.db
