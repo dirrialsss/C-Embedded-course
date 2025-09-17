@@ -28,12 +28,19 @@ int main() {
     }
     // Remove \n
     input[len] = '\0';
-    //different random sequences each time program runs
-    srand(time(NULL)); // init random
-    //shuffle function
-    shuffle(input, len);
 
-    printf("Shuffled string: %s\n", input);
+    //different random sequences each time program runs
+    srand(time(NULL));
+
+    if (len > 0) {
+        //shuffle function
+        shuffle(input, len);
+        printf("Shuffled string: %s\n", input);
+    }else if (len == 0) {
+        printf("You've entered an empty string\n");
+    }else {
+        printf("No valid ASCII characters entered.\n");
+    }
 
     return 0;
 }
