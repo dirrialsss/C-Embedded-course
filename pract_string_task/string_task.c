@@ -18,9 +18,13 @@ int main() {
     printf("Enter a string: ");
     fgets(input, sizeof(input), stdin);
 
-    // calculating string length (without '\0' and '\n')
-    while (input[len] != '\0' && input[len] != '\n') {
-        len++;
+    // Keeping only ASCII characters and remove newline '\n'
+    int i = 0;
+    while (input[i] != '\0' && input[i] != '\n') {
+        if ((unsigned char)input[i] <= 127) {
+            input[len++] = input[i];
+        }
+        i++;
     }
     // Remove \n
     input[len] = '\0';
