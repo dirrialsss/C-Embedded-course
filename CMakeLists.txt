@@ -5,3 +5,4 @@ set(CMAKE_C_STANDARD 11)
 
 add_subdirectory(pract_math_task)
 add_subdirectory(pract_string_task)
+add_subdirectory(pract_linkedList_task)
