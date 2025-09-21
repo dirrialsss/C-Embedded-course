@@ -14,6 +14,8 @@ void shuffle(char str[], int len) {
 int main() {
     char input[100];
     int len = 0;
+    // flag to check if user typed something
+    int hadInput = 0;
 
     printf("Enter a string: ");
     fgets(input, sizeof(input), stdin);
@@ -21,6 +23,7 @@ int main() {
     // Keeping only ASCII characters and remove newline '\n'
     int i = 0;
     while (input[i] != '\0' && input[i] != '\n') {
+        hadInput = 1;
         if ((unsigned char)input[i] <= 127) {
             input[len++] = input[i];
         }
@@ -36,7 +39,7 @@ int main() {
         //shuffle function
         shuffle(input, len);
         printf("Shuffled string: %s\n", input);
-    }else if (len == 0) {
+    }else if (!hadInput) {
         printf("You've entered an empty string\n");
     }else {
         printf("No valid ASCII characters entered.\n");
